@@ -97,10 +97,10 @@ module DMAC_TOP
 
     wire    __channel_sfr__in_t   ch_sfr_in[N_CH];
     wire    __channel_sfr__out_t  ch_sfr_out[N_CH];
-    assign  ch_sfr_in[0]        = cfg_hwif_in.CH0;
-    assign  ch_sfr_in[1]        = cfg_hwif_in.CH1;
-    assign  ch_sfr_in[2]        = cfg_hwif_in.CH2;
-    assign  ch_sfr_in[3]        = cfg_hwif_in.CH3;
+    assign  cfg_hwif_in.CH0     = ch_sfr_in[0];
+    assign  cfg_hwif_in.CH1     = ch_sfr_in[1];
+    assign  cfg_hwif_in.CH2     = ch_sfr_in[2];
+    assign  cfg_hwif_in.CH3     = ch_sfr_in[3];
     assign  ch_sfr_out[0]       = cfg_hwif_out.CH0;
     assign  ch_sfr_out[1]       = cfg_hwif_out.CH1;
     assign  ch_sfr_out[2]       = cfg_hwif_out.CH2;
